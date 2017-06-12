@@ -1,5 +1,6 @@
 # egg-socket.io问题复现
 
+### Issue链接 [#1034](https://github.com/eggjs/egg/issues/1034)
 ### 脚手架创建参数：`egg-init egg-socket-io-test --type simple`
 ### 相比脚手架只改动了2点：
 1. `plugin.js` 添加egg-socket.io ^1.x 插件；
