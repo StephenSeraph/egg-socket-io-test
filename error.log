@@ -1,0 +1,88 @@
+stephen@stephen-ubuntu ~/Laboratory> 
+git clone https://github.com/StephenSeraph/egg-socket-io-test.git
+Cloning into 'egg-socket-io-test'...
+remote: Counting objects: 26, done.
+remote: Compressing objects: 100% (20/20), done.
+remote: Total 26 (delta 2), reused 21 (delta 0), pack-reused 0
+Unpacking objects: 100% (26/26), done.
+Checking connectivity... done.
+stephen@stephen-ubuntu ~/Laboratory> cd egg-socket-io-test/
+stephen@stephen-ubuntu ~/L/egg-socket-io-test> npm i
+
+> fsevents@1.1.1 install /home/stephen/Laboratory/egg-socket-io-test/node_modules/fsevents
+> node install
+
+
+> webstorm-disable-index@1.2.0 postinstall /home/stephen/Laboratory/egg-socket-io-test/node_modules/webstorm-disable-index
+> node bin/webstorm-disable-index.js
+
+[webstorm-disable-index] /home/stephen/Laboratory/egg-socket-io-test/node_modules/webstorm-disable-index
+[webstorm-disable-index] write files at /home/stephen/Laboratory/egg-socket-io-test/
+[webstorm-disable-index] write to modules.xml
+[webstorm-disable-index] write to jsLibraryMappings.xml
+[webstorm-disable-index] write to misc.xml
+[webstorm-disable-index] write to egg-socket-io-test.iml
+
+> egg-ci@1.7.0 postinstall /home/stephen/Laboratory/egg-socket-io-test/node_modules/egg-ci
+> node install.js
+
+[egg-ci] create /home/stephen/Laboratory/egg-socket-io-test/.travis.yml success
+[egg-ci] create /home/stephen/Laboratory/egg-socket-io-test/appveyor.yml success
+added 890 packages in 9.582s
+stephen@stephen-ubuntu ~/L/egg-socket-io-test> node index.js 
+2017-06-13 17:07:57,341 INFO 31181 [master] =================== egg start =====================
+2017-06-13 17:07:57,343 INFO 31181 [master] egg version 1.4.0
+2017-06-13 17:07:57,343 INFO 31181 [master] start with options: {"framework":"/home/stephen/Laboratory/egg-socket-io-test/node_modules/egg","baseDir":"/home/stephen/Laboratory/egg-socket-io-test","port":7001,"workers":4,"plugins":null,"https":false,"key":"","cert":"","sticky":true}
+2017-06-13 17:07:57,343 INFO 31181 [master] start with env: isProduction: false, isDebug: false, EGG_SERVER_ENV: undefined, NODE_ENV: undefined
+2017-06-13 17:07:57,348 INFO 31181 [master] agent_worker#1:31187 start with clusterPort:37221
+2017-06-13 17:07:57,548 INFO 31181 [master] agent_worker#1:31187 started (203ms)
+2017-06-13 17:07:57,549 INFO 31181 [master] start appWorker with args ["{\"framework\":\"/home/stephen/Laboratory/egg-socket-io-test/node_modules/egg\",\"baseDir\":\"/home/stephen/Laboratory/egg-socket-io-test\",\"port\":7001,\"workers\":4,\"plugins\":null,\"https\":false,\"key\":\"\",\"cert\":\"\",\"sticky\":true,\"clusterPort\":37221}"]
+2017-06-13 17:07:57,561 INFO 31181 [master] app_worker#1:31197 start, state: none, current workers: ["1","2","3","4"]
+2017-06-13 17:07:57,561 INFO 31181 [master] app_worker#2:31198 start, state: none, current workers: ["1","2","3","4"]
+2017-06-13 17:07:57,561 INFO 31181 [master] app_worker#3:31203 start, state: none, current workers: ["1","2","3","4"]
+2017-06-13 17:07:57,561 INFO 31181 [master] app_worker#4:31208 start, state: none, current workers: ["1","2","3","4"]
+2017-06-13 17:07:57,990 INFO 31181 [master] app_worker#3:31203 started at 45907, remain 3 (442ms)
+2017-06-13 17:07:57,994 INFO 31181 [master] app_worker#4:31208 started at 45907, remain 2 (446ms)
+2017-06-13 17:07:57,995 INFO 31181 [master] app_worker#2:31198 started at 45907, remain 1 (447ms)
+2017-06-13 17:07:58,000 INFO 31181 [master] app_worker#1:31197 started at 45907, remain 0 (452ms)
+2017-06-13 17:07:58,001 INFO 31181 [master] egg started on http://127.0.0.1:7001 (658ms) with STICKY MODE!
+2017-06-13 17:08:05,120 ERROR 31198 nodejs.TypeError: Cannot read property 'emit' of null (uncaughtException throw 1 times on pid:31198)
+    at Socket.socketOnTimeout (_http_server.js:386:34)
+    at emitNone (events.js:105:13)
+    at Socket.emit (events.js:207:7)
+    at Socket._onTimeout (net.js:401:8)
+    at ontimeout (timers.js:488:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:283:5)
+
+pid: 31198
+hostname: stephen-ubuntu
+
+[Tue Jun 13 2017 17:08:05 GMT+0800 (CST)] [graceful:worker:31198:uncaughtException] throw error 1 times
+TypeError: Cannot read property 'emit' of null (uncaughtException throw 1 times on pid:31198)
+    at Socket.socketOnTimeout (_http_server.js:386:34)
+    at emitNone (events.js:105:13)
+    at Socket.emit (events.js:207:7)
+    at Socket._onTimeout (net.js:401:8)
+    at ontimeout (timers.js:488:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:283:5)
+TypeError: Cannot read property 'emit' of null (uncaughtException throw 1 times on pid:31198)
+    at Socket.socketOnTimeout (_http_server.js:386:34)
+    at emitNone (events.js:105:13)
+    at Socket.emit (events.js:207:7)
+    at Socket._onTimeout (net.js:401:8)
+    at ontimeout (timers.js:488:11)
+    at tryOnTimeout (timers.js:323:5)
+    at Timer.listOnTimeout (timers.js:283:5)
+[Tue Jun 13 2017 17:08:05 GMT+0800 (CST)] [graceful:worker:31198] will exit after 30000ms
+[Tue Jun 13 2017 17:08:05 GMT+0800 (CST)] [graceful:worker:31198] close server#0, _connections: 0
+[Tue Jun 13 2017 17:08:05 GMT+0800 (CST)] [graceful:worker:31198] close 1 servers!
+[Tue Jun 13 2017 17:08:05 GMT+0800 (CST)] [graceful:worker:31198] worker disconnect!
+[Tue Jun 13 2017 17:08:05 GMT+0800 (CST)] [cfork:master:31181] worker:31198 disconnect (exitedAfterDisconnect: true, state: disconnected, isDead: false)
+[Tue Jun 13 2017 17:08:05 GMT+0800 (CST)] [cfork:master:31181] don't fork new work (refork: false)
+2017-06-13 17:08:05,124 INFO 31181 [master] app_worker#2:31198 disconnect, suicide: true, state: disconnected, current workers: ["1","2","3","4"]
+^C2017-06-13 17:08:11,115 INFO 31181 [master] receive signal SIGINT, closing
+2017-06-13 17:08:11,115 INFO 31181 [master] kill agent worker with signal SIGTERM
+2017-06-13 17:08:11,115 INFO 31181 [master] close done, exiting with code:0
+2017-06-13 17:08:11,116 INFO 31181 [master] exit with code:0
